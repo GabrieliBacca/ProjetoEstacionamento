@@ -46,8 +46,6 @@ class _RegistrationState extends State<Registration> {
                             }
                             return null;
                           },
-
-
                          controller: nameController,
                           textAlign: TextAlign.center,
                           decoration: const InputDecoration(

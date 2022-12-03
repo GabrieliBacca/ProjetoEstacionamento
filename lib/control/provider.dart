@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import '../model/car.dart';
 
 class CarProvider extends ChangeNotifier {
-  CarProvider(){}
+  //CarProvider(){}
 
   List<Car> list = [];
 

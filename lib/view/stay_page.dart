@@ -24,10 +24,14 @@ class StayPage extends StatelessWidget {
             itemCount: stateCar.list.length,
             itemBuilder: (context, index) {
               final car = stateCar.list[index];
+
               return ListTile(
-                leading: Text(car.name),
-                title: Text(car.plate),
-                subtitle: Text("carrinhozinho"),
+                leading: Text("fotinho",style:
+                TextStyle(color: Colors.purple, fontSize: 18)),
+                title: Text(car.plate,style:
+                TextStyle(color: Colors.purple, fontSize: 18)),
+                subtitle: Text(car.name,style:
+             TextStyle(color: Colors.purple, fontSize: 18)),
               );
             },
           ),
@@ -36,3 +40,44 @@ class StayPage extends StatelessWidget {
     });
   }
 }
+
+//Colun de decoração
+// return Column(
+//   children: [
+//     Container(
+//       color: Colors.deepPurple[100],
+//       width: 350,
+//       height: 120,
+//       child: Padding(
+//         padding: const EdgeInsets.only(left: 15.0),
+//         child: Row(
+//           children: [
+//             Container(
+//               width: 110,
+//               height: 110,
+//             ),
+//             Padding(
+//               padding: const EdgeInsets.only(left: 8.0),
+//               child: Column(
+//                 crossAxisAlignment: CrossAxisAlignment.start,
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: [
+//                   Text(
+//                     'Motorista: ${car.name}',
+//                     style:
+//                     TextStyle(color: Colors.white, fontSize: 18),
+//                   ),
+//                   Text(
+//                     'Placa: ${car.plate}',
+//                     style:
+//                     TextStyle(color: Colors.white, fontSize: 18),
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ],
+//         ),
+//       ),
+//     )
+//   ],
+// );
