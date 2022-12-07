@@ -162,17 +162,17 @@ class _HomePageState extends State<HomePage> {
                       height: 120,
                       child: TextButton(
                         onPressed: () {
-                          // Navigator.pushNamed(
-                          //   context,
-                          //   ,
-                          // );
+                          Navigator.pushNamed(
+                            context,
+                            '/vacanciesPage',
+                          );
                         },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: const [
                             Icon(
-                              Icons.exit_to_app,
+                              Icons.car_crash_rounded,
                               color: Colors.white,
                               size: 35,
                             ),

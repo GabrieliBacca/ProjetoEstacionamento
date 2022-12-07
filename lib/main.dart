@@ -3,6 +3,7 @@ import 'package:estacionamento_projeto_final/view/home_page.dart';
 import 'package:estacionamento_projeto_final/view/list_exit_page.dart';
 import 'package:estacionamento_projeto_final/view/registration_page.dart';
 import 'package:estacionamento_projeto_final/view/stay_page.dart';
+import 'package:estacionamento_projeto_final/view/vacancies_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'control/provider.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/stayPage': (context) => const StayPage(),
         '/exitPage': (context) => const Exit(),
         '/listExitPage': (context) => const ListExitPage(),
+        '/vacanciesPage': (context) => const VacanciesPage(),
 
       },
     );
