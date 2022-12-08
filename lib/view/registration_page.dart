@@ -1,4 +1,6 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:provider/provider.dart';
 import '../control/provider.dart';
 import '../model/car.dart';
@@ -11,9 +13,12 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
+
   TextEditingController nameController = TextEditingController();
   TextEditingController plateController = TextEditingController();
   TextEditingController imageController = TextEditingController();
+  ImagePicker imagePicker = ImagePicker();
+  File? image;
 
   final _formKey = GlobalKey<FormState>();
 
@@ -75,6 +80,39 @@ class _RegistrationState extends State<Registration> {
                           ),
                         ),
                       ),
+                      (image == null)
+                          ? Container(
+
+                        width: 250,
+                        height: 150,
+                        decoration: BoxDecoration(
+                            color: Colors.deepPurple[200],
+                            borderRadius: BorderRadius.circular(20)),
+                        child: const Icon(
+                          Icons.add,
+                          size: 50,
+                          color: Colors.white,
+                        ),
+                      )
+                          : Container(
+                        width: 250,
+                        height: 150,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Image.file(
+                            image!,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                      ),
+                      IconButton(
+                          onPressed: () {
+                            getImage();
+                          },
+                          icon: const Icon(
+                            Icons.camera_alt,
+                            color: Colors.deepPurple,
+                          )),
                       ElevatedButton(
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
@@ -106,5 +144,16 @@ class _RegistrationState extends State<Registration> {
         );
       },
     );
+  }
+
+
+  Future getImage() async {
+    var temporaryImage =
+    await imagePicker.pickImage(source: ImageSource.camera);
+    if (temporaryImage != null) {
+      setState(() {
+        image = File(temporaryImage.path);
+      });
+    }
   }
 }
