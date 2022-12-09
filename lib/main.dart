@@ -30,7 +30,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/registrationPage': (context) => const Registration(),
         '/stayPage': (context) => const StayPage(),
-        //'/exitPage': (context) => const Exit(),
+        '/exitPage': (context) => const Exit(),
         '/listExitPage': (context) => const ListExitPage(),
         '/vacanciesPage': (context) => const VacanciesPage(),
 

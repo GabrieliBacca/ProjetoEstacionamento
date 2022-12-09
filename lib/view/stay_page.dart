@@ -26,12 +26,13 @@ class StayPage extends StatelessWidget {
               final car = stateCar.list[index];
 
               return ListTile(
-                leading: Text("fotinho",style:
-                TextStyle(color: Colors.purple, fontSize: 18)),
+                leading: car,
+                // leading: const Text("fotinho",style:
+                // TextStyle(color: Colors.purple, fontSize: 18)),
                 title: Text(car.plate,style:
-                TextStyle(color: Colors.purple, fontSize: 18)),
+                const TextStyle(color: Colors.purple, fontSize: 18)),
                 subtitle: Text(car.name,style:
-             TextStyle(color: Colors.purple, fontSize: 18)),
+             const TextStyle(color: Colors.purple, fontSize: 18)),
               );
             },
           ),

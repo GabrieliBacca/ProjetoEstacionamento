@@ -9,13 +9,13 @@ class Car extends StatelessWidget {
   const Car({
     required this.name,
     required this.plate,
-    required this.image,
+    //required this.image,
     Key? key,
   }) : super(key: key);
 
   final String name;
   final String plate;
-  final File image;
+  //final File image;
 
   @override
   Widget build(BuildContext context) {
@@ -27,8 +27,6 @@ class Car extends StatelessWidget {
             centerTitle: true,
             title: const Text(
               'Visualizar estadias',
-              style:
-              TextStyle(color: Colors.indigoAccent, fontFamily: 'Poppins'),
             ),
             iconTheme: const IconThemeData(color: Colors.indigoAccent),
             backgroundColor: Colors.transparent,

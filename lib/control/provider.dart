@@ -23,50 +23,10 @@ class CarProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  // Future<void> getRegisters() async {
-  //   var db = DatabaseHelper();
-  //
-  //   registerDatabase = (await db.getRegisters()).cast<Car>();
-  //   notifyListeners();
-  // }
-
   removeRegister(int index) {
    list.removeAt(index);
     notifyListeners();
   }
-
-  // Future<void> removeRow(
-  //     int? id,
-  //     String name,
-  //     String plate,
-  //     DateTime date,
-  //     ) async {
-  //   var db = DatabaseHelper();
-  //   await db.update(
-  //     Register(
-  //       id: id,
-  //       driverName: name,
-  //       licensePlate: plate,
-  //       entryDate: date,
-  //       exitDate: DateTime.now(),
-  //     ),
-  //   );
-  //
-  //   notifyListeners();
-  // }
-  //
-  // Future<void> addRow(
-  //     String name,
-  //     String plate,
-  //     DateTime date,
-  //     ) async {
-  //   var db = DatabaseHelper();
-  //   db.insert(
-  //     Register(driverName: name, licensePlate: plate, entryDate: date),
-  //   );
-  //   notifyListeners();
-  // }
-
 
   listcar() {
     list.length;

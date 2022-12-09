@@ -13,7 +13,6 @@ class Registration extends StatefulWidget {
 }
 
 class _RegistrationState extends State<Registration> {
-
   TextEditingController nameController = TextEditingController();
   TextEditingController plateController = TextEditingController();
   TextEditingController imageController = TextEditingController();
@@ -51,7 +50,7 @@ class _RegistrationState extends State<Registration> {
                             }
                             return null;
                           },
-                         controller: nameController,
+                          controller: nameController,
                           textAlign: TextAlign.center,
                           decoration: const InputDecoration(
                             border: OutlineInputBorder(),
@@ -82,29 +81,28 @@ class _RegistrationState extends State<Registration> {
                       ),
                       (image == null)
                           ? Container(
-
-                        width: 250,
-                        height: 150,
-                        decoration: BoxDecoration(
-                            color: Colors.deepPurple[200],
-                            borderRadius: BorderRadius.circular(20)),
-                        child: const Icon(
-                          Icons.add,
-                          size: 50,
-                          color: Colors.white,
-                        ),
-                      )
+                              width: 250,
+                              height: 150,
+                              decoration: BoxDecoration(
+                                  color: Colors.deepPurple[200],
+                                  borderRadius: BorderRadius.circular(20)),
+                              child: const Icon(
+                                Icons.add,
+                                size: 50,
+                                color: Colors.white,
+                              ),
+                            )
                           : Container(
-                        width: 250,
-                        height: 150,
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(20),
-                          child: Image.file(
-                            image!,
-                            fit: BoxFit.cover,
-                          ),
-                        ),
-                      ),
+                              width: 250,
+                              height: 150,
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(20),
+                                child: Image.file(
+                                  image!,
+                                  fit: BoxFit.cover,
+                                ),
+                              ),
+                            ),
                       IconButton(
                           onPressed: () {
                             getImage();
@@ -113,28 +111,27 @@ class _RegistrationState extends State<Registration> {
                             Icons.camera_alt,
                             color: Colors.deepPurple,
                           )),
-                      // ElevatedButton(
-                      //   onPressed: () {
-                      //     // if (_formKey.currentState!.validate()) {
-                      //     //   print(nameController.text);
-                      //     //   print(plateController.text);
-                      //     //   state.save(
-                      //     //     // Car(
-                      //     //     //   name: nameController.text,
-                      //     //     //   plate: plateController.text,
-                      //     //     //
-                      //     //     // ),
-                      //     //   );
-                      //      // Navigator.pop(context);
-                      //       //ScaffoldMessenger.of(context).showSnackBar(
-                      //         const SnackBar(
-                      //           content: Text('Veiculo Cadastrado'),
-                      //         ),
-                      //       );
-                      //     }
-                      //   },
-                      //   child: Text('Adicionar'),
-                      // )
+                      ElevatedButton(
+                        onPressed: () {
+                          if (_formKey.currentState!.validate()) {
+                            print(nameController.text);
+                            print(plateController.text);
+                            state.save(
+                              Car(
+                                name: nameController.text,
+                                plate: plateController.text,
+                              ),
+                            );
+                            Navigator.pop(context);
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                content: Text('Veiculo Cadastrado'),
+                              ),
+                            );
+                          }
+                        },
+                        child: Text('Adicionar'),
+                      )
                     ],
                   ),
                 ),
@@ -146,10 +143,9 @@ class _RegistrationState extends State<Registration> {
     );
   }
 
-
   Future getImage() async {
     var temporaryImage =
-    await imagePicker.pickImage(source: ImageSource.camera);
+        await imagePicker.pickImage(source: ImageSource.camera);
     if (temporaryImage != null) {
       setState(() {
         image = File(temporaryImage.path);

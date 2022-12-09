@@ -41,11 +41,10 @@ class _VacanciesPageState extends State<VacanciesPage> {
                       children: [
                         const Text(
                           "Total de vagas:",
-                          style: TextStyle(
-                              fontSize: 20),
+                          style: TextStyle(fontSize: 20),
                         ),
                         Text(
-                          ' ${context.watch<CarProvider>().numberOfLots}',
+                          '${context.watch<CarProvider>().numberOfLots}',
                           style: const TextStyle(
                              fontSize: 30),
                         ),
