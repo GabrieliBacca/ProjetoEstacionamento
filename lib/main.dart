@@ -7,7 +7,6 @@ import 'package:estacionamento_projeto_final/view/vacancies_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'control/provider.dart';
-import 'model/car.dart';
 
 void main() {
   runApp(
@@ -31,7 +30,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/registrationPage': (context) => const Registration(),
         '/stayPage': (context) => const StayPage(),
-        '/exitPage': (context) => const Exit(),
+        //'/exitPage': (context) => const Exit(),
         '/listExitPage': (context) => const ListExitPage(),
         '/vacanciesPage': (context) => const VacanciesPage(),
 

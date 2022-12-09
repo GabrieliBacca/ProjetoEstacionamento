@@ -113,28 +113,28 @@ class _RegistrationState extends State<Registration> {
                             Icons.camera_alt,
                             color: Colors.deepPurple,
                           )),
-                      ElevatedButton(
-                        onPressed: () {
-                          if (_formKey.currentState!.validate()) {
-                            print(nameController.text);
-                            print(plateController.text);
-                            print(imageController.text);
-                            state.save(
-                              Car(
-                                name: nameController.text,
-                                plate: plateController.text,
-                              ),
-                            );
-                            Navigator.pop(context);
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
-                                content: Text('Veiculo Cadastrado'),
-                              ),
-                            );
-                          }
-                        },
-                        child: Text('Adicionar'),
-                      )
+                      // ElevatedButton(
+                      //   onPressed: () {
+                      //     // if (_formKey.currentState!.validate()) {
+                      //     //   print(nameController.text);
+                      //     //   print(plateController.text);
+                      //     //   state.save(
+                      //     //     // Car(
+                      //     //     //   name: nameController.text,
+                      //     //     //   plate: plateController.text,
+                      //     //     //
+                      //     //     // ),
+                      //     //   );
+                      //      // Navigator.pop(context);
+                      //       //ScaffoldMessenger.of(context).showSnackBar(
+                      //         const SnackBar(
+                      //           content: Text('Veiculo Cadastrado'),
+                      //         ),
+                      //       );
+                      //     }
+                      //   },
+                      //   child: Text('Adicionar'),
+                      // )
                     ],
                   ),
                 ),
