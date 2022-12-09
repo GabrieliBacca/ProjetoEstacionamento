@@ -16,6 +16,7 @@ class _RegistrationState extends State<Registration> {
   TextEditingController nameController = TextEditingController();
   TextEditingController plateController = TextEditingController();
   TextEditingController imageController = TextEditingController();
+
   ImagePicker imagePicker = ImagePicker();
   File? image;
 
@@ -120,6 +121,7 @@ class _RegistrationState extends State<Registration> {
                               Car(
                                 name: nameController.text,
                                 plate: plateController.text,
+                                image: imageController.text,
                               ),
                             );
                             Navigator.pop(context);

@@ -14,7 +14,7 @@ class Car extends StatelessWidget {
     required this.name,
     required this.plate,
     //required this.image,
-    Key? key,
+    Key? key, required String image,
   }) : super(key: key);
 
   @override
