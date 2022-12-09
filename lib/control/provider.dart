@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'database.dart';
-import '../model/add_register_controller.dart';
 import '../model/car.dart';
 
 class CarProvider extends ChangeNotifier {

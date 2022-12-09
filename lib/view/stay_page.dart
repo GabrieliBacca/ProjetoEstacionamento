@@ -26,7 +26,6 @@ class StayPage extends StatelessWidget {
               final car = stateCar.list[index];
 
               return ListTile(
-                leading: car,
                 // leading: const Text("fotinho",style:
                 // TextStyle(color: Colors.purple, fontSize: 18)),
                 title: Text(car.plate,style:
