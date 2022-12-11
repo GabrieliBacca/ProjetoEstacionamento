@@ -59,36 +59,36 @@ class Car extends StatelessWidget {
                             SizedBox(
                               width: 300,
                               height: 100,
-                              child: Row(
 
-                                Container(
-                                  decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.all(
-                                        Radius.circular(10)),
-                                    color: Colors.white,
-                                  ),
-                                  width: 90,
-                                  height: 90,
-                                  child: const Icon(
-                                    Icons.no_photography,
-                                    color: Colors.indigoAccent,
-                                    size: 70,
-                                  ),
-                                )
-                                    :
-                                SizedBox(
-                                width: 90,
-                                height: 90,
-                                child: ClipRRect(
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(10)),
-                                  child: Image.file(
-                                    //prhar imagem
-                                    fit: BoxFit.cover,
-                                  ),
-                                ),
-                              ),
-                              )
+
+                              //   Container(
+                              //     decoration: const BoxDecoration(
+                              //       borderRadius: BorderRadius.all(
+                              //           Radius.circular(10)),
+                              //       color: Colors.white,
+                              //     ),
+                              //     width: 90,
+                              //     height: 90,
+                              //     child: const Icon(
+                              //       Icons.no_photography,
+                              //       color: Colors.indigoAccent,
+                              //       size: 70,
+                              //     ),
+                              //   )
+                              //       :
+                              //   SizedBox(
+                              //   width: 90,
+                              //   height: 90,
+                              //   child: ClipRRect(
+                              //     borderRadius: const BorderRadius.all(
+                              //         Radius.circular(10)),
+                              //     child: Image.file(
+                              //       //prhar imagem
+                              //       fit: BoxFit.cover,
+                              //     ),
+                              //   ),
+                              // ),
+                              // )
 
                                   child: Padding(
                                     padding: const EdgeInsets.only(left: 10),
@@ -106,8 +106,6 @@ class Car extends StatelessWidget {
                                           ),
                                         ]),
                                   ),
-                                ],
-                              ),
                             ),
 
                           ],
