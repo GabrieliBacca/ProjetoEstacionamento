@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:estacionamento_projeto_final/control/provider.dart';
-import 'package:estacionamento_projeto_final/view/registration_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

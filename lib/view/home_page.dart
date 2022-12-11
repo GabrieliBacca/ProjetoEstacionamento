@@ -1,4 +1,3 @@
-import 'package:estacionamento_projeto_final/view/registration_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -86,7 +85,7 @@ class _HomePageState extends State<HomePage> {
                         onPressed: () {
                           Navigator.pushNamed(
                             context,
-                            '/listExitPage',
+                            '/stayPage',
                           );
                         },
                         child: Column(
