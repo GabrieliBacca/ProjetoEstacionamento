@@ -5,7 +5,7 @@ import 'package:estacionamento_projeto_final/view/vacancies_page.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'control/provider.dart';
-import 'model/add_register_provider.dart';
+import 'control/add_car_provider.dart';
 
 void main() {
   Provider.debugCheckInvalidValueType = null;
@@ -13,7 +13,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => AddRegisterProvider(),
+          create: (context) => CarAddProvider(),
         ),
         ChangeNotifierProvider(
           create: (context) => CarProvider(),

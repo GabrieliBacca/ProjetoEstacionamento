@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -22,13 +21,12 @@ class Register extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Container(
             decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                begin: Alignment.topLeft,
-                colors: [Colors.deepPurple, Colors.deepPurple, Colors.deepPurple],
-              ),
+              color: Colors.deepPurple[100],
               borderRadius: BorderRadius.circular(20),
             ),
             width: 350,
@@ -37,39 +35,36 @@ class Register extends StatelessWidget {
               padding: const EdgeInsets.only(left: 15.0),
               child: Row(
                 children: [
-                    SizedBox(
-                          width: 110,
-                          height: 110,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(10),
-                            child: Image.file(
-                              photo!,
-                              fit: BoxFit.cover,
-                            ),
-                          )),
+                  SizedBox(
+                      width: 110,
+                      height: 110,
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(10),
+                        child: Image.file(
+                          photo!,
+                          fit: BoxFit.cover,
+                        ),
+                      )),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
                         Text(
                           'Motorista: $driverName',
                           style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 20),
+                              color: Colors.white, fontSize: 20),
                         ),
                         Text(
                           'Placa: $licensePlate',
                           style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 15),
+                              color: Colors.white, fontSize: 15),
                         ),
                         Text(
                           'Entrada: ${DateFormat('dd/MM/yyyy HH:mm').format(entryDate)}',
                           style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 15),
+                              color: Colors.white, fontSize: 15),
                         ),
                       ],
                     ),

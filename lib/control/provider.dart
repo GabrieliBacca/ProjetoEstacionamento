@@ -1,23 +1,20 @@
-
 import 'package:flutter/material.dart';
-
 import 'package:shared_preferences/shared_preferences.dart';
-import '../model/add_register_provider.dart';
-import '../model/car.dart';
+import 'add_car_provider.dart';
 
 class CarProvider extends ChangeNotifier {
-
   numberSharedPreferences() {
     _init();
   }
 
   int _numberLots = 0;
+
   int get numberOfLots => _numberLots;
 
   Future<void> _init() async {
     final prefs = await SharedPreferences.getInstance();
     _numberLots = prefs.getInt('num') ?? 0;
-  //  print('get ${prefs.getInt('num')}');
+    //  print('get ${prefs.getInt('num')}');
     notifyListeners();
     notifyListeners();
   }
@@ -30,12 +27,9 @@ class CarProvider extends ChangeNotifier {
     await prefs.setInt('num', number);
     notifyListeners();
   }
-
 }
 
-
-
-class AddRegisterProvider with ChangeNotifier {
+class CarAddProvider with ChangeNotifier {
   List<Widget> registers = [].cast<Widget>();
 
   addRegister(String name, String plate, DateTime date, photo) {

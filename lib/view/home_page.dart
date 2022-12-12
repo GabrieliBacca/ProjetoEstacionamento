@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
@@ -54,7 +53,7 @@ class _HomePageState extends State<HomePage> {
                             context,
                             '/registrationPage',
                           );
-                          },
+                        },
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
@@ -68,7 +67,7 @@ class _HomePageState extends State<HomePage> {
                               textAlign: TextAlign.center,
                               "Entrada veículo",
                               style:
-                              TextStyle(color: Colors.white, fontSize: 18),
+                                  TextStyle(color: Colors.white, fontSize: 18),
                             )
                           ],
                         ),
@@ -101,7 +100,7 @@ class _HomePageState extends State<HomePage> {
                               textAlign: TextAlign.center,
                               "Saída veículo",
                               style:
-                              TextStyle(color: Colors.white, fontSize: 18),
+                                  TextStyle(color: Colors.white, fontSize: 18),
                             )
                           ],
                         ),
@@ -146,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                               textAlign: TextAlign.center,
                               "Visualizar veículos",
                               style:
-                              TextStyle(color: Colors.white, fontSize: 18),
+                                  TextStyle(color: Colors.white, fontSize: 18),
                             )
                           ],
                         ),
@@ -179,7 +178,7 @@ class _HomePageState extends State<HomePage> {
                               textAlign: TextAlign.center,
                               "Vagas",
                               style:
-                              TextStyle(color: Colors.white, fontSize: 18),
+                                  TextStyle(color: Colors.white, fontSize: 18),
                             )
                           ],
                         ),
