@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../control/provider.dart';
 import '../model/add_register_provider.dart';
 
 

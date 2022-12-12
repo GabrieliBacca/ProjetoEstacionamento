@@ -1,6 +1,4 @@
-import 'package:estacionamento_projeto_final/view/exit_page.dart';
 import 'package:estacionamento_projeto_final/view/home_page.dart';
-import 'package:estacionamento_projeto_final/view/list_exit_page.dart';
 import 'package:estacionamento_projeto_final/view/registrations_page.dart';
 import 'package:estacionamento_projeto_final/view/stay_page.dart';
 import 'package:estacionamento_projeto_final/view/vacancies_page.dart';
@@ -46,7 +44,7 @@ class MyApp extends StatelessWidget {
         '/registrationPage': (context) => const  Registration(),
         '/stayPage': (context) => const ViewRegisterPage(),
         //'/exitPage': (context) => const Exit(),
-        '/listExitPage': (context) => const ListExitPage(),
+        //'/listExitPage': (context) => const ListExitPage(),
         '/vacanciesPage': (context) => const VacanciesPage(),
 
       },

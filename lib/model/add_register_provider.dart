@@ -3,22 +3,6 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-class AddRegisterProvider with ChangeNotifier {
-  List<Widget> registers = [].cast<Widget>();
-
-  addRegister(String name, String plate, DateTime date, File? photo) {
-    registers.add(
-      Register(
-        driverName: name,
-        licensePlate: plate,
-        entryDate: date,
-        photo: photo,
-      ),
-    );
-    notifyListeners();
-  }
-}
-
 class Register extends StatelessWidget {
   const Register(
       {required this.driverName,
@@ -53,20 +37,7 @@ class Register extends StatelessWidget {
               padding: const EdgeInsets.only(left: 15.0),
               child: Row(
                 children: [
-                  (photo == null)
-                      ? Container(
-                          width: 110,
-                          height: 110,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.deepPurple[100],
-                          ),
-                          child: const Icon(
-                            Icons.no_photography,
-                            color: Colors.white,
-                            size: 50,
-                          ))
-                      : SizedBox(
+                    SizedBox(
                           width: 110,
                           height: 110,
                           child: ClipRRect(

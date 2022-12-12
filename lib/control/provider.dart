@@ -1,48 +1,23 @@
-import 'dart:collection';
-import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import '../model/add_register_provider.dart';
-import 'database.dart';
 import '../model/car.dart';
 
 class CarProvider extends ChangeNotifier {
 
-  List<Car> list = [];
-  List<Car> registerDatabase = [];
-
-  // save(Car car) {
-  //   list.add(car);
-  //   for(final it in list){
-  //     print(it.name);
-  //   }
-  //   print(list.length);
-  //   notifyListeners();
-  // }
-
-  removeRegister(int index) {
-    list.removeAt(index);
-    notifyListeners();
-  }
-
-  listcar() {
-    list.length;
-    notifyListeners();
-  }
-
-  NumberSharedPreferences() {
+  numberSharedPreferences() {
     _init();
   }
 
   int _numberLots = 0;
-
   int get numberOfLots => _numberLots;
 
   Future<void> _init() async {
     final prefs = await SharedPreferences.getInstance();
     _numberLots = prefs.getInt('num') ?? 0;
-    print('get ${prefs.getInt('num')}');
+  //  print('get ${prefs.getInt('num')}');
     notifyListeners();
     notifyListeners();
   }
@@ -50,12 +25,28 @@ class CarProvider extends ChangeNotifier {
   Future<void> changeNumberOfLots(controller) async {
     final prefs = await SharedPreferences.getInstance();
     final number = int.parse(controller);
-    final text = controller.toString();
-
-    print('set $number');
+    //print('set $number');
     _numberLots = number;
     await prefs.setInt('num', number);
     notifyListeners();
   }
 
+}
+
+
+
+class AddRegisterProvider with ChangeNotifier {
+  List<Widget> registers = [].cast<Widget>();
+
+  addRegister(String name, String plate, DateTime date, photo) {
+    registers.add(
+      Register(
+        driverName: name,
+        licensePlate: plate,
+        entryDate: date,
+        photo: photo,
+      ),
+    );
+    notifyListeners();
+  }
 }
