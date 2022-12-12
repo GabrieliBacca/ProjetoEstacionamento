@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../control/provider.dart';
 
-class ViewRegisterPage extends StatelessWidget {
-  const ViewRegisterPage({Key? key}) : super(key: key);
+class StayPage extends StatelessWidget {
+  const StayPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

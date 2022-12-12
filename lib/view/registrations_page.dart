@@ -79,8 +79,12 @@ class _RegistrationState extends State<Registration> {
                         padding: const EdgeInsets.all(8.0),
                         child: TextFormField(
                           validator: (String? value) {
-                            if (value != null && value.isEmpty) {
+                            if (value!.isEmpty) {
                               return 'Insira a placa';
+                            } else if (value.length > 7) {
+                              return 'Insira uma placa menor';
+                            } else if (value.length < 7) {
+                              return 'Insira uma placa maior';
                             }
                             return null;
                           },
